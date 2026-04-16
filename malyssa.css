@@ -1,20 +1,18 @@
 body{
   background-image: linear-gradient(to right, #870876, #6411a7);
-width: 100vw;
-height: 100vh;
 color: #fdfafa;
 display: flex;
 justify-content: center;
-  
 }
 
-.Cadastcontainer{
+#container{
  display: flex;
- width: 80vw;
- height: 90vh;
+ width:100vw ;
+ height: auto;
+ background: black;
  flex-direction: column;
- border: 5px solid black;
  justify-content: center;
+ align-items: center;
 }
 
 img{
@@ -25,10 +23,16 @@ img{
 }
 
 .model{
-    width: 80vw;
+    width: 95vw;
     height: 30vh;
-    border: 5px solid black;
+    border: 5px solid #00000000 ;
     display: flex;
     flex-direction: row;
     background: black;
+}
+
+#fim{
+    width: 90vw;
+    height: 5vh;
+    margin: 15px;
 }
