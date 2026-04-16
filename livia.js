@@ -1,4 +1,4 @@
-const filmes = document.getElementsByClassName(".model")[0];// pega o elemento direto das divs com a class "model"
+const filmes = document.querySelectorAll(".model");
 const totalf = document.getElementById("total");
 let total = 0;
 
@@ -6,23 +6,22 @@ filmes.forEach(filme => {
     const btnMais = filme.querySelector(".mais");
     const btnMenos = filme.querySelector(".menos");
     const qtdElemento = filme.querySelector(".qtd");
-    // qndtdade de filmes selecionados
-    let qntdde = 0;
-    // pega o preço do HTML
-    const preco = Number(filme.getAttribute("data-preco"));
+    let quantidade = 0;
+    const preco = Number(filme.getAttribute("preco"));
+
     btnMais.addEventListener("click", () => {
-        qntdde++;
+        quantidade++;
         total += preco;
 
-        qtdElemento.textContent = qntdde;
+        qtdElemento.textContent = quantidade;
         atualizarTotal();
     });
     btnMenos.addEventListener("click", () => {
-        if (qntdde > 0) {
-            qntdde--;
+        if (quantidade > 0) {
+            quantidade--;
             total -= preco;
 
-            qtdElemento.textContent = qntdde;
+            qtdElemento.textContent = quantidade;
             atualizarTotal();
         }
     });
