@@ -1,5 +1,5 @@
 body{
-  background-image: linear-gradient(to right, #870876, #6411a7);
+  background-image: linear-gradient(to right, oklch(55.261% 0.22048 28.61), hwb(0 1% 75%));
 color: #fdfafa;
 display: flex;
 justify-content: center;
@@ -10,9 +10,10 @@ justify-content: center;
  width:100vw ;
  height: auto;
  background: black;
+ border-radius: 20px;
  flex-direction: column;
- justify-content: center;
  align-items: center;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 img{
@@ -20,19 +21,76 @@ img{
     height: 30vh;
     border: 2px solid black;
     border-radius: 20px;
+    margin-left: 20px;
 }
 
 .model{
-    width: 95vw;
-    height: 30vh;
-    border: 5px solid #00000000 ;
+    width: 75vw;
+    height: 35vh;
+    border: 3px solid hsl(0, 89%, 28%) ;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     background: black;
+    margin: 10px;
+    display: flex;
+    align-items: center;
 }
 
 #fim{
     width: 90vw;
     height: 5vh;
-    margin: 15px;
+    margin: 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    background: lab(27.58% 47.31 34.92) ;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 0 10px hsl(300, 5%, 96%), 0 0 10px ;
 }
+
+.text{
+    width: 25vw;
+    height: auto;
+    margin-left: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+.bb{
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 20px;
+   
+}
+
+.valor{
+    width: 75vw;
+    height: 5vh;
+    margin: 10px;
+    display: flex;
+    border: 3px solid hwb(0 95% 2%);
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 20px;
+}
+
+button{
+width: 3vw;
+height: 3vh;
+border-radius: 10px;
+font-size: 1rem;
+cursor: pointer;
+ box-shadow: 0 0 10px hwb(0 95% 4%), 0 0 10px;
+}
+
+.model:hover {
+  transform: scale(1.1); 
+  transition: 1s;
+}
+
