@@ -3,12 +3,12 @@ const totalf = document.getElementById("total");
 
 let total = 0;
 filmes.forEach(filme => {
-    const btmais = filme.querySelector(".mais");
+    const btnmais = filme.querySelector(".mais");
     const btnmenos = filme.querySelector(".menos");
     const qtdelmt = filme.querySelector(".qntd");
 
     let qntdd = 0;
-    const preco = Number(filme.getAttribute("preco"));// converte o valor em text para numero
+    const preco = Number(filme.getAttribute("preco")); // converte o valor em text para numero
     
     btnmais.addEventListener("click", () => {
         qntdd++;
