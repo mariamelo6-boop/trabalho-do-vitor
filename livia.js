@@ -3,26 +3,26 @@ const totalf = document.getElementById("total");
 
 let total = 0;
 filmes.forEach(filme => {
-    const btais = filme.querySelector(".mais");
-    const btnMenos = filme.querySelector(".menos");
-    const qtdElemento = filme.querySelector(".qntd");
+    const btmais = filme.querySelector(".mais");
+    const btnmenos = filme.querySelector(".menos");
+    const qtdelmt = filme.querySelector(".qntd");
 
-    let quantidade = 0;
+    let qntdd = 0;
     const preco = Number(filme.getAttribute("preco"));// converte o valor em text para numero
     
-    btnMais.addEventListener("click", () => {
-        quantidade++;
+    btnmais.addEventListener("click", () => {
+        qntdd++;
         total += preco;
 // att o preço para aparecer na tela
-        qtdElemento.textContent = quantidade;
+        qtdelmt.textContent = qntdd;
         atualizarTotal();
     });
-    btnMenos.addEventListener("click", () => {
-        if (quantidade > 0) {
-            quantidade--;
+    btnmenos.addEventListener("click", () => {
+        if (qntdd > 0) {
+            qntdd--;
             total -= preco;
 
-            qtdElemento.textContent = quantidade;
+            qtdelmt.textContent = qntdd;
             atualizarTotal();
         }
     });
