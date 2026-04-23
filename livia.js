@@ -1,12 +1,11 @@
-const filmes = document.querySelectorAll("model");//  pega tds os elemnys com model
+const filmes = document.querySelectorAll(".model");//  pega tds os elemnys com model
 const totalf = document.getElementById("total");
-const finalizar = document.getElementById("finalizar");
 
 let total = 0;
 filmes.forEach(filme => {
     const btnMais = filme.querySelector(".mais");
     const btnMenos = filme.querySelector(".menos");
-    const qtdElemento = filme.querySelector("qntd");
+    const qtdElemento = filme.querySelector(".qntd");
 
     let quantidade = 0;
     const preco = Number(filme.getAttribute("preco"));// converte o valor em text para numero
